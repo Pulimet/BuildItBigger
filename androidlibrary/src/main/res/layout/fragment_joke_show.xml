@@ -8,16 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
-        android:id="@+id/instructions_text_view"
+        android:id="@+id/tv_joke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/instructions_text_view"
-        android:onClick="tellJoke"
-        android:text="Button"/>
+        />
 
 </RelativeLayout>
