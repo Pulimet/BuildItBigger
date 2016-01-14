@@ -9,6 +9,9 @@ import net.alexandroid.androidlibrary.JokeShowActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String joke;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +25,12 @@ public class MainActivity extends AppCompatActivity {
     EndpointsAsyncTask.CallBack mCallBack = new EndpointsAsyncTask.CallBack() {
         @Override
         public void onResult(String result) {
-            showJoke(result);
+            joke = result;
+            startJokeShowActivity();
         }
     };
 
-    private void showJoke(String joke) {
+    private void startJokeShowActivity() {
         Intent intent = new Intent(this, JokeShowActivity.class);
         intent.putExtra(Intent.EXTRA_TEXT, joke);
         startActivity(intent);
